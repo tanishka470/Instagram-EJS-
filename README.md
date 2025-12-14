@@ -11,13 +11,13 @@ A simple Node.js + Express app using EJS templates to render an Instagram-like p
 ## Project Structure
 ```
 EJS/
-├─ app.js               # Express server entry
-├─ package.json         # Dependencies and scripts
-├─ data.json            # Sample user/profile data
+├─ app.js
+├─ package.json
+├─ data.json
 ├─ public/
-│  └─ style.css         # Styles for views
+│  └─ style.css
 └─ views/
-   └─ profile.ejs       # EJS template for profile
+  └─ profile.ejs
 ```
 
 ## Requirements
@@ -31,16 +31,13 @@ npm install
 
 ## Run
 ```bash
-# Using node
 node app.js
 
-# Using nodemon (auto-reload)
 nodemon app.js
 ```
 The server starts on `http://localhost:8080` (configurable in `app.js`).
 
 ## Scripts
-Add these to `package.json` if not present:
 ```json
 {
   "scripts": {
@@ -49,10 +46,8 @@ Add these to `package.json` if not present:
   }
 }
 ```
-Run with:
 ```bash
 npm run start
-# or
 npm run dev
 ```
 
