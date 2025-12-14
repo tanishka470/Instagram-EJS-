@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= user.name %> • Instagram</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- PROFILE HEADER -->
+    <div class="profile-header">
+        <div class="avatar"></div>
+
+        <div class="profile-info">
+            <h2><%= user.name %></h2>
+
+            <div class="stats">
+                <span><b><%= user.posts.length %></b> posts</span>
+                <span><b><%= user.followers %></b> followers</span>
+                <span><b><%= user.following %></b> following</span>
+            </div>
+
+            <button class="follow-btn">Follow</button>
+        </div>
+    </div>
+
+    <!-- POSTS GRID -->
+    <div class="posts">
+        <% user.posts.forEach(post => { %>
+            <div class="post">
+                <img src="<%= post.image %>" alt="post">
+                <div class="overlay">
+                    ❤️ <%= post.likes %> &nbsp; 💬 <%= post.comments %>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+</div>
+
+</body>
+</html>
